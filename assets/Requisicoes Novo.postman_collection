@@ -1,0 +1,1016 @@
+{
+	"info": {
+		"_postman_id": "c4f8b547-e0b4-4401-8390-62384e0833fa",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Aluno",
+			"item": [
+				{
+					"name": "Buscar Todos os Alunos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aluno",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Aluno Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aluno/id/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno",
+								"id",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Alunos Por Nome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aluno/nome/maria",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno",
+								"nome",
+								"maria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Novo Aluno",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Ana Souza\",\r\n    \"matricula\": \"202020\",\r\n    \"cpf\": \"00000000013\",\r\n    \"email\": \"ana@email.com\",\r\n    \"telefone\": \"47999000012\",\r\n    \"endereco\": {\r\n        \"logradouro\": \"Rua Francisco Valhdieck\",\r\n        \"numero\": \"123\",\r\n        \"complemento\": \"Na esquina\",\r\n        \"bairro\": \"Fortaleza\",\r\n        \"cidade\": \"Blumenau\",\r\n        \"uf\": \"SC\",\r\n        \"cep\": \"00000412\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/aluno",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Aluno",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"2\",\r\n    \"nome\": \"Maria Santos da Silva\",\r\n    \"email\": \"maria.silva@email.com\",\r\n    \"telefone\": \"47999000011\",\r\n    \"endereco\": {\r\n        \"logradouro\": \"Rua XV de Novembro\",\r\n        \"numero\": \"999\",\r\n        \"complemento\": \"Na esquina\",\r\n        \"bairro\": \"Centro\",\r\n        \"cidade\": \"Blumenau\",\r\n        \"uf\": \"SC\",\r\n        \"cep\": \"00000411\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/aluno",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Matricular Aluno",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"4\",\r\n    \"idTurma\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/aluno/matricular",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno",
+								"matricular"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reativar Aluno inativo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aluno/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Desativar Aluno",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"2\",\r\n    \"idTurma\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/aluno/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aluno",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Disciplina",
+			"item": [
+				{
+					"name": "Buscar Todas as Disciplinas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/disciplina",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"disciplina"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todas as Disciplinas Por Nome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/disciplina/nome/geografia",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"disciplina",
+								"nome",
+								"geografia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Nova Disciplina",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Sociologia\",\r\n    \"cargaHoraria\": \"100.00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/disciplina",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"disciplina"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Disciplina",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"nome\": \"Biologia\",\r\n    \"cargaHoraria\": \"250\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/disciplina",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"disciplina"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reativar Disciplina Inativa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/disciplina/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"disciplina",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Desativar Disciplina",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nome\": \"Matemática\",\r\n    \"cargaHoraria\": \"400\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/disciplina/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"disciplina",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Turma",
+			"item": [
+				{
+					"name": "Buscar Todas as Turmas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/turma",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"turma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Turmas Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/turma/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"turma",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todas as Turmas Desativadas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": \"A3\",\r\n    \"periodo\": \"MATUTINO\",\r\n    \"serie\": \"TERCEIRO_ANO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/turma/desativadas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"turma",
+								"desativadas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Nova Turma",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": \"A3\",\r\n    \"periodo\": \"MATUTINO\",\r\n    \"serie\": \"TERCEIRO_ANO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/turma",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"turma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Turma",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"3\",\r\n    \"periodo\": \"MATUTINO\",\r\n    \"serie\": \"SEGUNDO_ANO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/turma",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"turma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reativar Turma Inativa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"3\",\r\n    \"periodo\": \"MATUTINO\",\r\n    \"serie\": \"SEGUNDO_ANO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/turma/id/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"turma",
+								"id",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adicionar Disciplinas a Turma",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTurma\": \"2\",\r\n    \"idDisciplinas\": [\r\n        \"1\",\r\n        \"5\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/turma/adiciona-disciplinas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"turma",
+								"adiciona-disciplinas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Desativar Turma",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"3\",\r\n    \"periodo\": \"MATUTINO\",\r\n    \"serie\": \"SEGUNDO_ANO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/turma/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"turma",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Professor",
+			"item": [
+				{
+					"name": "Buscar Todos os Professores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/professor",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"professor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Professor Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/professor/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"professor",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todos os Professores Por Nome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/professor/nome/luiz",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"professor",
+								"nome",
+								"luiz"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todos os Professores Por Formação",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/professor/formacao/física",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"professor",
+								"formacao",
+								"física"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Novo Professor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Luiz de Nascimento\",\r\n    \"matricula\": \"030303\",\r\n    \"cpf\": \"00000000021\",\r\n    \"telefone\": \"47999000014\",\r\n    \"email\": \"luiz.nascimento@email.com\",\r\n    \"salario\": \"2500.00\",\r\n    \"formacao\": \"Doutorado em Geografia\",\r\n    \"endereco\": {\r\n        \"logradouro\": \"Rua Francisco Valhdieck\",\r\n        \"numero\": \"123\",\r\n        \"complemento\": \"Na esquina\",\r\n        \"bairro\": \"Fortaleza\",\r\n        \"cidade\": \"Blumenau\",\r\n        \"uf\": \"SC\",\r\n        \"cep\": \"00000412\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/professor",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"professor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Professor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"4\",\r\n    \"nome\": \"Luiz de Nascimento Santos\",\r\n    \"telefone\": \"47991000014\",\r\n    \"email\": \"luiz@email.com\",\r\n    \"salario\": \"2800.00\",\r\n    \"formacao\": \"Doutorado em Geografia\",\r\n    \"endereco\": {\r\n        \"logradouro\": \"Rua 2 de Setembro\",\r\n        \"numero\": \"456\",\r\n        \"complemento\": \"Perto da prefeitura\",\r\n        \"bairro\": \"Centro\",\r\n        \"cidade\": \"Blumenau\",\r\n        \"uf\": \"SC\",\r\n        \"cep\": \"00000413\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/professor",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"professor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reativar Professor Inativo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/professor/id/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"professor",
+								"id",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adicionar Disciplinas Que Professor Pode Lecionar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idProfessor\": \"2\",\r\n    \"idDisciplinas\": [\r\n        \"3\",\r\n        \"4\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/professor/adiciona-disciplinas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"professor",
+								"adiciona-disciplinas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Desativar Professor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/professor/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"professor",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Aula",
+			"item": [
+				{
+					"name": "Buscar Todas as Aulas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aula",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aula"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Aula Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aula/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aula",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todas as Aulas de Professor Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aula/professor/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aula",
+								"professor",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todas as Aulas de Turma Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aula/turma/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aula",
+								"turma",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todas as Aulas de Disciplina Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aula/disciplina/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aula",
+								"disciplina",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todas as Aulas Por Periodo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aula/periodo/MATUTINO",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aula",
+								"periodo",
+								"MATUTINO"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todas as Aulas do Periodo Matutino",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aula/periodo/matutino",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aula",
+								"periodo",
+								"matutino"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todas as Aulas do Periodo Vespertino",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aula/periodo/vespertino",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aula",
+								"periodo",
+								"vespertino"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todas as Aulas do Periodo Noturno",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aula/periodo/noturno",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aula",
+								"periodo",
+								"noturno"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todas as Aulas Inativas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/aula/inativos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aula",
+								"inativos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Nova Aula",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dia\": \"17/01/2023\",\r\n    \"ordem\": \"QUARTA_AULA\",\r\n    \"idDisciplina\": \"4\",\r\n    \"idProfessor\": \"2\",\r\n    \"idTurma\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/aula",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aula"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Desativar Aula",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dia\": \"20/01/2023\",\r\n    \"ordem\": \"QUARTA_AULA\",\r\n    \"idDisciplina\": \"1\",\r\n    \"idProfessor\": \"3\",\r\n    \"idTurma\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/aula/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aula",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
